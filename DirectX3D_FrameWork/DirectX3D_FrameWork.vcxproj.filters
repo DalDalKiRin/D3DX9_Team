@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MainGame">
+      <UniqueIdentifier>{c025bddb-cb80-4788-8606-af2bb95f07f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyUtil">
+      <UniqueIdentifier>{e409e17b-4c29-4a64-a639-84e3fa25b879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{d36a950b-2aac-42c2-a39c-c23cea000edf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{2f0ef21d-0fa3-4076-9727-72fcbe74de69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8d2b68d0-5d90-43e4-8ae6-a78669c9431e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Camera">
+      <UniqueIdentifier>{7ebe92b5-015a-46dd-8e05-d25f8aad4b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Transform">
+      <UniqueIdentifier>{85e2a2a0-60bd-4ac4-909f-b26e102b6e16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseObject">
+      <UniqueIdentifier>{5e3a4591-9e33-4483-8036-8c0529709f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Light">
+      <UniqueIdentifier>{ce9f46a7-96f2-4b71-b9b5-9b097d353987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BoundSphere&amp;BoundBox">
+      <UniqueIdentifier>{d4714be7-c2b8-4ace-8c0c-3b45f0f3bdca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{a4925360-9015-4be1-8dbf-d27059c62b1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\XMesh">
+      <UniqueIdentifier>{d9a5d6dc-1194-40ab-9208-4e0bddbfedc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Font">
+      <UniqueIdentifier>{0adf449f-c631-4db9-ab1b-cb5ef386640c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Key">
+      <UniqueIdentifier>{eb49b3c4-dc5f-4b08-9e5a-2d6798cb6c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Log">
+      <UniqueIdentifier>{3ba7f601-9c51-488f-8838-0f79168509d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Gizmo">
+      <UniqueIdentifier>{bdb8686d-18b5-436a-b7fb-ebba50beb557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Physic">
+      <UniqueIdentifier>{80b93f1f-2a8d-46f2-a9f2-b59f33a6eb9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Singleton">
+      <UniqueIdentifier>{60c0a638-7b95-47c8-b05d-3d6af8affd8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Time">
+      <UniqueIdentifier>{1c2550b7-b462-4db5-8b74-f7a62f260f74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Resource">
+      <UniqueIdentifier>{92455db1-c794-4856-8c5a-8209068e1b8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Particle">
+      <UniqueIdentifier>{bf22ff23-c5d7-479a-ae5e-73ae1903914b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Terrain">
+      <UniqueIdentifier>{0f1bf413-c4d4-4622-b574-18301d031df0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Sprite">
+      <UniqueIdentifier>{ddefa4ea-0082-485f-80d7-92d405da627f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\TrailRender">
+      <UniqueIdentifier>{70370e33-d006-43dc-83f9-9fa0d2687b65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\SceneBase">
+      <UniqueIdentifier>{947c1d5a-8fb6-4167-af78-425ddbd80286}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Sample">
+      <UniqueIdentifier>{092e851e-ea4c-474a-b28f-768f3ae9460d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Scene">
+      <UniqueIdentifier>{82efc86f-b325-4e33-a7f2-c574b3799f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\SceneChangeEffect">
+      <UniqueIdentifier>{8d0c3d24-8c54-495d-97ba-ca197ac8d492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Test">
+      <UniqueIdentifier>{9f9a7a04-dbf4-403c-9a20-7feff6b2feff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="cMainGame.h">
+      <Filter>MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="MyUtil.h">
+      <Filter>MyUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="cCamera.h">
+      <Filter>Common\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="cTransform.h">
+      <Filter>Common\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="cFrustum.h">
+      <Filter>Common\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseObject.h">
+      <Filter>BaseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="cQuad.h">
+      <Filter>BaseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="cSetBoundObject.h">
+      <Filter>BaseObject</Filter>
+    </ClInclude>
+    <ClInclude Include="cBoundSphere.h">
+      <Filter>BoundSphere&amp;BoundBox</Filter>
+    </ClInclude>
+    <ClInclude Include="cBoundBox.h">
+      <Filter>BoundSphere&amp;BoundBox</Filter>
+    </ClInclude>
+    <ClInclude Include="cLight.h">
+      <Filter>Common\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="cLight_Direction.h">
+      <Filter>Common\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="cLight_Point.h">
+      <Filter>Common\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="cImage.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="cXMesh.h">
+      <Filter>Common\XMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cXMesh_Static.h">
+      <Filter>Common\XMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cDXFontManager.h">
+      <Filter>Manager\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="cKeyMgr.h">
+      <Filter>Manager\Key</Filter>
+    </ClInclude>
+    <ClInclude Include="cLogMgr.h">
+      <Filter>Manager\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="cGizmoManager.h">
+      <Filter>Manager\Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="cPhysicManager.h">
+      <Filter>Manager\Physic</Filter>
+    </ClInclude>
+    <ClInclude Include="cSingletonBase.h">
+      <Filter>Manager\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="cTimeMgr.h">
+      <Filter>Manager\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="cResourceMgr.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="cResourceMgr_Texture.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="cResourceMgr_ShaderFX.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="cXMesh_Skinned.h">
+      <Filter>Common\XMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="BoneHierachy.h">
+      <Filter>Common\XMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cSkinnedAnimation.h">
+      <Filter>Common\XMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cResourceMgr_XSkinnedMesh.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="cResourceMgr_XStaticMesh.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="cParticle.h">
+      <Filter>Common\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="cParticleQuad.h">
+      <Filter>Common\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="cPartcleEmitter.h">
+      <Filter>Common\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="cTerrain.h">
+      <Filter>Common\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="cQuadTree.h">
+      <Filter>Common\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="cQuadParticleEmitter.h">
+      <Filter>Common\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="cSpriteManager.h">
+      <Filter>Manager\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="cTrailRender.h">
+      <Filter>Common\TrailRender</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene.h">
+      <Filter>Scene\SceneBase</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_00.h">
+      <Filter>Scene\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="cSceneManager.h">
+      <Filter>Manager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="cSceneChangeEffectUpDown.h">
+      <Filter>Common\SceneChangeEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="cSceneChangeEffect.h">
+      <Filter>Common\SceneChangeEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_01.h">
+      <Filter>Scene\Sample</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cMainGame.cpp">
+      <Filter>MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MyUtil.cpp">
+      <Filter>MyUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="cCamera.cpp">
+      <Filter>Common\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="cTransform.cpp">
+      <Filter>Common\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="cFrustum.cpp">
+      <Filter>Common\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="cBaseObject.cpp">
+      <Filter>BaseObject</Filter>
+    </ClCompile>
+    <ClCompile Include="cQuad.cpp">
+      <Filter>BaseObject</Filter>
+    </ClCompile>
+    <ClCompile Include="cSetBoundObject.cpp">
+      <Filter>BaseObject</Filter>
+    </ClCompile>
+    <ClCompile Include="cBoundSphere.cpp">
+      <Filter>BoundSphere&amp;BoundBox</Filter>
+    </ClCompile>
+    <ClCompile Include="cBoundBox.cpp">
+      <Filter>BoundSphere&amp;BoundBox</Filter>
+    </ClCompile>
+    <ClCompile Include="cLight.cpp">
+      <Filter>Common\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="cLight_Direction.cpp">
+      <Filter>Common\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="cLight_Point.cpp">
+      <Filter>Common\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="cImage.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="cXMesh.cpp">
+      <Filter>Common\XMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="cXMesh_Static.cpp">
+      <Filter>Common\XMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="cDXFontManager.cpp">
+      <Filter>Manager\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="cKeyMgr.cpp">
+      <Filter>Manager\Key</Filter>
+    </ClCompile>
+    <ClCompile Include="cLogMgr.cpp">
+      <Filter>Manager\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="cGizmoManager.cpp">
+      <Filter>Manager\Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="cPhysicManager.cpp">
+      <Filter>Manager\Physic</Filter>
+    </ClCompile>
+    <ClCompile Include="cSingletonBase.cpp">
+      <Filter>Manager\Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="cTimeMgr.cpp">
+      <Filter>Manager\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="cResourceMgr.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="cResourceMgr_Texture.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="cResourceMgr_ShaderFX.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="cXMesh_Skinned.cpp">
+      <Filter>Common\XMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="BoneHierachy.cpp">
+      <Filter>Common\XMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="cSkinnedAnimation.cpp">
+      <Filter>Common\XMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="cResourceMgr_XSkinnedMesh.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="cResourceMgr_XStaticMesh.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="cParticle.cpp">
+      <Filter>Common\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="cParticleQuad.cpp">
+      <Filter>Common\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="cPartcleEmitter.cpp">
+      <Filter>Common\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="cTerrain.cpp">
+      <Filter>Common\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="cQuadTree.cpp">
+      <Filter>Common\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="cQuadParticleEmitter.cpp">
+      <Filter>Common\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="cSpriteManager.cpp">
+      <Filter>Manager\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="cTrailRender.cpp">
+      <Filter>Common\TrailRender</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene.cpp">
+      <Filter>Scene\SceneBase</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_00.cpp">
+      <Filter>Scene\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="cSceneManager.cpp">
+      <Filter>Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="cSceneChangeEffectUpDown.cpp">
+      <Filter>Common\SceneChangeEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="cSceneChangeEffect.cpp">
+      <Filter>Common\SceneChangeEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_01.cpp">
+      <Filter>Scene\Sample</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DirectX3D_FrameWork.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="DirectX3D_FrameWork.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
