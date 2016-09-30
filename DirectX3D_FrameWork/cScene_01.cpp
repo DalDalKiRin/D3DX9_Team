@@ -400,7 +400,3 @@ void cScene_01::Scene_RenderSprite()
 	RECT rcDest = { 0, 0, 300, 300 };
 	SPRITE_MGR->DrawArea(  this->pMainCamera->GetRenderTexture( 9 ), &rcSour, &rcDest );
 }
-
-
-
-
