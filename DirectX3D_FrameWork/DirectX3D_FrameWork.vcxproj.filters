@@ -100,6 +100,24 @@
     <Filter Include="Scene\Test">
       <UniqueIdentifier>{9f9a7a04-dbf4-403c-9a20-7feff6b2feff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene\Game">
+      <UniqueIdentifier>{61878017-92e0-4729-ba1c-3ad1628c8c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Synopsis">
+      <UniqueIdentifier>{fae5d349-d6a1-4ef6-a668-108392445c73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\GameEnd">
+      <UniqueIdentifier>{0eb6968b-2d39-49bf-ae1a-a7596324f5b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Intro">
+      <UniqueIdentifier>{bdb21971-e0dd-437e-a877-a3f5a5ff29b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Title">
+      <UniqueIdentifier>{8075582f-8cd7-49e5-93fe-c487d3df04b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Loading">
+      <UniqueIdentifier>{d6d4e6be-2dc2-4971-bcd9-e9ff70065d3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -249,6 +267,36 @@
     <ClInclude Include="cScene_01.h">
       <Filter>Scene\Sample</Filter>
     </ClInclude>
+    <ClInclude Include="cScene_Intro.h">
+      <Filter>Scene\Intro</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_Title.h">
+      <Filter>Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_Chapter_00.h">
+      <Filter>Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_Chapter_01.h">
+      <Filter>Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_Town.h">
+      <Filter>Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_Boss.h">
+      <Filter>Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_Synopsis.h">
+      <Filter>Scene\Synopsis</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_Loading.h">
+      <Filter>Scene\Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_GameClear.h">
+      <Filter>Scene\GameEnd</Filter>
+    </ClInclude>
+    <ClInclude Include="cScene_GameOver.h">
+      <Filter>Scene\GameEnd</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -391,6 +439,36 @@
     </ClCompile>
     <ClCompile Include="cScene_01.cpp">
       <Filter>Scene\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Intro.cpp">
+      <Filter>Scene\Intro</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Title.cpp">
+      <Filter>Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Chapter_00.cpp">
+      <Filter>Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Chapter_01.cpp">
+      <Filter>Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Town.cpp">
+      <Filter>Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Boss.cpp">
+      <Filter>Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Synopsis.cpp">
+      <Filter>Scene\Synopsis</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_Loading.cpp">
+      <Filter>Scene\Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_GameClear.cpp">
+      <Filter>Scene\GameEnd</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_GameOver.cpp">
+      <Filter>Scene\GameEnd</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
