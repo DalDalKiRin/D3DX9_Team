@@ -17,6 +17,7 @@ private:
 
 private:
 	cScene*		m_pNowScene;		// 현재 물려 있는 씬
+	std::string	m_strNowSceneName;	// 현재 물려 있는 씬 이름
 	cScene*		m_pReleaseScene;	// 날릴 씬
 
 	MAP_SCENE	m_Scenes;			// 현재 가지고 있는 씬들
@@ -59,6 +60,9 @@ public:
 		int inEffect,
 		int outEffect
 	);
+
+	// 현재 씬 정보 출력
+	void DrawSceneInfo(void);
 
 	// 로딩 쓰레드 함수 프렌드 선언
 	friend DWORD CALLBACK LoadingThread(LPVOID lpParam);

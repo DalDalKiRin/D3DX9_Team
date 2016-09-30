@@ -63,6 +63,7 @@ cSceneManager::cSceneManager()
 	: m_pNowScene(NULL)
 	, m_pReleaseScene(NULL)
 	, m_pNowChangeEffect(NULL)
+	, m_strNowSceneName("")
 {
 }
 
@@ -205,6 +206,7 @@ void cSceneManager::ChangeScene(std::string sceneName, int effectNum)
 	{
 		m_pNowScene->Release();
 		m_pNowScene->Init();
+		m_strNowSceneName = sceneName;
 		return;
 	}
 
@@ -217,6 +219,7 @@ void cSceneManager::ChangeScene(std::string sceneName, int effectNum)
 
 		// 두번 째 씬은 Init 된 상태로 들어간다.
 		iter->second->Init();
+		m_strNowSceneName = sceneName;
 
 		// 체인지 효과 발동
 		m_pNowChangeEffect->ChangeStart(
@@ -236,6 +239,7 @@ void cSceneManager::ChangeScene(std::string sceneName, int effectNum)
 
 		// 새로운 씬 초기화
 		m_pNowScene->Init();
+		m_strNowSceneName = sceneName;
 	}
 }
 
@@ -310,4 +314,11 @@ void cSceneManager::ChangeSceneWithLoading(
 			pLoadingScene,
 			1.0f);
 	}
+}
+
+void cSceneManager::DrawSceneInfo(void)
+{
+	char szTemp[128];
+	wsprintf(szTemp, "%s", m_strNowSceneName.c_str());
+	DXFONT_MGR->PrintTextOutline(szTemp, 0, 60, 0xffffff00, 0xff000000);
 }

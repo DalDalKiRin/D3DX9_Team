@@ -6,7 +6,10 @@ class cScene;
 class cMainGame
 {
 private:
-	cScene*			m_pNowScene;
+	cScene*					m_pNowScene;
+
+	vector<std::string>		m_vecSceneName;
+	int						m_nCurrentSceneIndex;
 
 public:
 	cMainGame(void);
@@ -28,5 +31,10 @@ public:
 
 	// 프로시저
 	LRESULT MainProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam);
+
+public :
+	// # 디버깅용 #
+	void NextControl(void);
+
 };
 

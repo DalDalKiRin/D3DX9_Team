@@ -4,8 +4,20 @@
 #include "cScene_00.h"
 #include "cScene_01.h"
 
+// # cScene #
+#include "cScene_Boss.h"
+#include "cScene_Chapter_00.h"
+#include "cScene_Chapter_01.h"
+#include "cScene_Town.h"
+#include "cScene_Intro.h"
+#include "cScene_GameClear.h"
+#include "cScene_GameOver.h"
+#include "cScene_Title.h"
+#include "cScene_Synopsis.h"
+#include "cScene_Loading.h"
 
 cMainGame::cMainGame(void)
+	: m_nCurrentSceneIndex(0)
 {
 }
 
@@ -34,8 +46,41 @@ HRESULT cMainGame::Init(void)
 	// ¾À »ý¼º
 	SCENE_MGR->AddScene("¾À0", new cScene_00());
 	SCENE_MGR->AddScene("¾À1", new cScene_01());
-
 	SCENE_MGR->ChangeScene("¾À1");
+
+	/* # ¿ì¸® ¾À # */
+	m_vecSceneName.clear();
+
+	SCENE_MGR->AddScene("Intro", new cScene_Intro());
+	m_vecSceneName.push_back("Intro");
+
+	SCENE_MGR->AddScene("Title", new cScene_Title());
+	m_vecSceneName.push_back("Title");
+
+	SCENE_MGR->AddScene("Synopsis", new cScene_Synopsis());
+	m_vecSceneName.push_back("Synopsis");
+
+	SCENE_MGR->AddScene("Town", new cScene_Town());
+	m_vecSceneName.push_back("Town");
+
+	SCENE_MGR->AddScene("Chapter_00", new cScene_Chapter_00());
+	m_vecSceneName.push_back("Chapter_00");
+
+	SCENE_MGR->AddScene("Chapter_01", new cScene_Chapter_01());
+	m_vecSceneName.push_back("Chapter_01");
+
+	SCENE_MGR->AddScene("Boss", new cScene_Boss());
+	m_vecSceneName.push_back("Boss");
+
+	SCENE_MGR->AddScene("Clear", new cScene_GameClear());
+	m_vecSceneName.push_back("Clear");
+
+	SCENE_MGR->AddScene("Over", new cScene_GameOver());
+	m_vecSceneName.push_back("Over");
+
+	SCENE_MGR->AddScene("Loading", new cScene_Loading());
+	m_vecSceneName.push_back("Loading");
+
 
 	// # ½ÇÆÐ ½Ã #
 	// return E_FAIL;
@@ -93,6 +138,10 @@ void cMainGame::Update()
 	if (KEY_MGR->IsOnceDown(VK_F1)) SCENE_MGR->ChangeScene("¾À0");
 	else if (KEY_MGR->IsOnceDown(VK_F2)) SCENE_MGR->ChangeScene("¾À1");
 
+	NextControl();
+
+	
+
 	// # ¾À ¾÷µ¥ÀÌÆ® #
 	SCENE_MGR->Update(timeDelta);
 }
@@ -127,8 +176,11 @@ void cMainGame::Draw()
 		//¿ùµå ±×¸®µå
 		GIZMO_MGR->WorldGrid( 1, 10 );
 
+
 		// # Å¸ÀÓ Á¤º¸ Ãâ·Â #
 		TIME_MGR->DrawTimeInfo();
+
+		SCENE_MGR->DrawSceneInfo();
 #endif
 
 		Device->EndScene();
@@ -163,5 +215,22 @@ LRESULT cMainGame::MainProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lPar
 		break;
 	}
 	return DefWindowProc(hWnd, iMessage, wParam, lParam);
+}
+
+void cMainGame::NextControl(void)
+{
+	if (KEY_MGR->IsOnceDown(VK_F11))
+	{
+		m_nCurrentSceneIndex--;
+		if (m_nCurrentSceneIndex < 0) m_nCurrentSceneIndex = 0;
+		SCENE_MGR->ChangeScene(m_vecSceneName[m_nCurrentSceneIndex]);
+	}
+
+	if (KEY_MGR->IsOnceDown(VK_F12))
+	{
+		m_nCurrentSceneIndex++;
+		if (m_nCurrentSceneIndex > 9) m_nCurrentSceneIndex = 9;
+		SCENE_MGR->ChangeScene(m_vecSceneName[m_nCurrentSceneIndex]);
+	}
 }
 
