@@ -1,0 +1,7 @@
+﻿  cPhysicManager.cpp
+c:\users\gw\desktop\d3d\directx3d_framework\cphysicmanager.cpp(352): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\gw\desktop\d3d\directx3d_framework\cphysicmanager.cpp(1103): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\gw\desktop\d3d\directx3d_framework\cphysicmanager.cpp(1129): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CollisionTestScene.cpp
+  코드를 생성하고 있습니다...
+  DirectX3D_FrameWork.vcxproj -> C:\Users\gw\Desktop\D3D\Debug\DirectX3D_FrameWork.exe

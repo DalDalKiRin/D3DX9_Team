@@ -817,7 +817,6 @@ bool cPhysicManager::IsBlocking(
 	cTransform* pTransA, cBoundSphere* pBoundA,
 	cTransform* pTransB, cBoundSphere* pBoundB,
 	float moveFactor)
-
 {
 	return true;
 }

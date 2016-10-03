@@ -75,8 +75,8 @@ void cBoundBox::GetWorldAABBMinMax(const cTransform* pTrans, D3DXVECTOR3* min, D
 // # 월드 단위로 그려진다. #
 void cBoundBox::RenderGizmo(const cTransform* pTrans)
 {
-	// # cBoundSphere::RenderGizmo( trans ); #
-
+	// # cBoundSphere::RenderGizmo( pTrans ); #
+	cBoundSphere::RenderGizmo(pTrans);
 	// # 변환된 박스의 월드위치 8 개를 얻는다. #
 	D3DXVECTOR3 worldPos[8];
 	GetWorldBox(pTrans, worldPos);
@@ -135,7 +135,7 @@ void cBoundBox::RenderGizmo(const cTransform* pTrans)
 	}
 
 	//AABB 그린다.
-	//GIZMO_MGR->AABBBox( min, max, 0xff008800 );
+	GIZMO_MGR->AABBBox( min, max, 0xff008800 );
 }
 
 void cBoundBox::SetBound(const D3DXVECTOR3* pCenter, const D3DXVECTOR3* pHalfSize)

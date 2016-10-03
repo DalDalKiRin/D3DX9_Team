@@ -16,6 +16,9 @@
 #include "cScene_Synopsis.h"
 #include "cScene_Loading.h"
 
+// # collisionTestScene #
+#include "CollisionTestScene.h"
+
 cMainGame::cMainGame(void)
 	: m_nCurrentSceneIndex(0)
 {
@@ -81,6 +84,9 @@ HRESULT cMainGame::Init(void)
 	SCENE_MGR->AddScene("Loading", new cScene_Loading());
 	m_vecSceneName.push_back("Loading");
 
+	SCENE_MGR->AddScene("CollisionTestScene", new CollisionTestScene());
+
+	SCENE_MGR->ChangeScene("Loading");
 
 	// # ½ÇÆÐ ½Ã #
 	// return E_FAIL;
@@ -232,5 +238,12 @@ void cMainGame::NextControl(void)
 		if (m_nCurrentSceneIndex > 9) m_nCurrentSceneIndex = 9;
 		SCENE_MGR->ChangeScene(m_vecSceneName[m_nCurrentSceneIndex]);
 	}
+
+	if (KEY_MGR->IsOnceDown(VK_NUMPAD0))
+	{
+		SCENE_MGR->ChangeScene("CollisionTestScene");
+	}
+
+	
 }
 

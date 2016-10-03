@@ -118,6 +118,9 @@
     <Filter Include="Scene\Loading">
       <UniqueIdentifier>{d6d4e6be-2dc2-4971-bcd9-e9ff70065d3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SampleClass">
+      <UniqueIdentifier>{6251f1ff-637f-4703-b9d1-49e0ff13b37a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -297,6 +300,15 @@
     <ClInclude Include="cScene_GameOver.h">
       <Filter>Scene\GameEnd</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionTestScene.h">
+      <Filter>Scene\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="cEnemy.h">
+      <Filter>SampleClass</Filter>
+    </ClInclude>
+    <ClInclude Include="cPigNose.h">
+      <Filter>SampleClass</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -469,6 +481,15 @@
     </ClCompile>
     <ClCompile Include="cScene_GameOver.cpp">
       <Filter>Scene\GameEnd</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionTestScene.cpp">
+      <Filter>Scene\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="cEnemy.cpp">
+      <Filter>SampleClass</Filter>
+    </ClCompile>
+    <ClCompile Include="cPigNose.cpp">
+      <Filter>SampleClass</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

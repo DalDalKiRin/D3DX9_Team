@@ -71,8 +71,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\program files\DirectX\Include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\program files\DirectX\Lib\x86;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -157,6 +157,7 @@
     <ClInclude Include="cBoundSphere.h" />
     <ClInclude Include="cCamera.h" />
     <ClInclude Include="cDXFontManager.h" />
+    <ClInclude Include="cEnemy.h" />
     <ClInclude Include="cFrustum.h" />
     <ClInclude Include="cGizmoManager.h" />
     <ClInclude Include="cImage.h" />
@@ -166,10 +167,12 @@
     <ClInclude Include="cLight_Point.h" />
     <ClInclude Include="cLogMgr.h" />
     <ClInclude Include="cMainGame.h" />
+    <ClInclude Include="CollisionTestScene.h" />
     <ClInclude Include="cPartcleEmitter.h" />
     <ClInclude Include="cParticle.h" />
     <ClInclude Include="cParticleQuad.h" />
     <ClInclude Include="cPhysicManager.h" />
+    <ClInclude Include="cPigNose.h" />
     <ClInclude Include="cQuad.h" />
     <ClInclude Include="cQuadParticleEmitter.h" />
     <ClInclude Include="cQuadTree.h" />
@@ -217,6 +220,7 @@
     <ClCompile Include="cBoundSphere.cpp" />
     <ClCompile Include="cCamera.cpp" />
     <ClCompile Include="cDXFontManager.cpp" />
+    <ClCompile Include="cEnemy.cpp" />
     <ClCompile Include="cFrustum.cpp" />
     <ClCompile Include="cGizmoManager.cpp" />
     <ClCompile Include="cImage.cpp" />
@@ -226,10 +230,12 @@
     <ClCompile Include="cLight_Point.cpp" />
     <ClCompile Include="cLogMgr.cpp" />
     <ClCompile Include="cMainGame.cpp" />
+    <ClCompile Include="CollisionTestScene.cpp" />
     <ClCompile Include="cPartcleEmitter.cpp" />
     <ClCompile Include="cParticle.cpp" />
     <ClCompile Include="cParticleQuad.cpp" />
     <ClCompile Include="cPhysicManager.cpp" />
+    <ClCompile Include="cPigNose.cpp" />
     <ClCompile Include="cQuad.cpp" />
     <ClCompile Include="cQuadParticleEmitter.cpp" />
     <ClCompile Include="cQuadTree.cpp" />
