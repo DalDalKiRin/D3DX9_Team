@@ -73,7 +73,16 @@ private:
 	//Animation 을 바꾼다.
 	void SetAnimation(LPD3DXANIMATIONSET animSet);
 
+	// 추가
+public:
+	// 현재 진행중인 애니메이션 이름 가져오기
+	std::string GetNowPlayAnimationName(void)
+	{
+		return this->m_pNowPlayAnimationSet->GetName();
+	}
 
+	// 이름으로 본 찾기
+	D3DXMATRIXA16 * GetBoneTransform(std::string str);
 
 };
 

@@ -16,8 +16,12 @@
 #include "cScene_Synopsis.h"
 #include "cScene_Loading.h"
 
-// # collisionTestScene #
+// # collisionTestScene 규원 #
 #include "CollisionTestScene.h"
+
+// 세훈
+#include "cScene_PlayerTest.h"
+
 
 cMainGame::cMainGame(void)
 	: m_nCurrentSceneIndex(0)
@@ -85,8 +89,10 @@ HRESULT cMainGame::Init(void)
 	m_vecSceneName.push_back("Loading");
 
 	SCENE_MGR->AddScene("CollisionTestScene", new CollisionTestScene());
+	SCENE_MGR->AddScene("cScene_PlayerTest", new cScene_PlayerTest());
 
 	SCENE_MGR->ChangeScene("Loading");
+
 
 	// # 실패 시 #
 	// return E_FAIL;
@@ -242,6 +248,11 @@ void cMainGame::NextControl(void)
 	if (KEY_MGR->IsOnceDown(VK_NUMPAD0))
 	{
 		SCENE_MGR->ChangeScene("CollisionTestScene");
+	}
+
+	if (KEY_MGR->IsOnceDown(VK_NUMPAD1))
+	{
+		SCENE_MGR->ChangeScene("cScene_PlayerTest");
 	}
 
 	

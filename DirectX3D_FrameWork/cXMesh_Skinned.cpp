@@ -173,6 +173,8 @@ void cXMesh_Skinned::Render(const cTransform* pTrans)
 	{
 		D3DXMATRIXA16 matWorld = pTrans->GetFinalMatrix();
 		matFinal = m_matCorrection * matWorld;
+		//matFinal = matWorld;
+
 	}
 	else
 	{

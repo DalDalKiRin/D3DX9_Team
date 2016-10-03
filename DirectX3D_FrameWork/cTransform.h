@@ -36,9 +36,12 @@ protected:
 
 	// # 로컬행렬	#
 	D3DXMATRIXA16	matLocal; // # 부모를 기준으로한 상태적인 행렬 ( 만약 부모가 없다면 matFinal 이랑 같다 ) #
+public:
 
 	// # 최종 행렬 ( 부모가 있든없은 가장월드에 정직한행렬 ) #
 	D3DXMATRIXA16	matFinal;
+
+protected:
 
 	// # 위치값  ( 부모가 있으면 부모에대한 상태적인 로컬위치 없으면 월드 위치 ) #
 	D3DXVECTOR3		position;

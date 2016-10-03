@@ -194,6 +194,7 @@
     <ClInclude Include="cScene_GameOver.h" />
     <ClInclude Include="cScene_Intro.h" />
     <ClInclude Include="cScene_Loading.h" />
+    <ClInclude Include="cScene_PlayerTest.h" />
     <ClInclude Include="cScene_Synopsis.h" />
     <ClInclude Include="cScene_Title.h" />
     <ClInclude Include="cScene_Town.h" />
@@ -257,6 +258,7 @@
     <ClCompile Include="cScene_GameOver.cpp" />
     <ClCompile Include="cScene_Intro.cpp" />
     <ClCompile Include="cScene_Loading.cpp" />
+    <ClCompile Include="cScene_PlayerTest.cpp" />
     <ClCompile Include="cScene_Synopsis.cpp" />
     <ClCompile Include="cScene_Title.cpp" />
     <ClCompile Include="cScene_Town.cpp" />

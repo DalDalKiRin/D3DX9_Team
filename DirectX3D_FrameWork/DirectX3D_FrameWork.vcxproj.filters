@@ -309,6 +309,9 @@
     <ClInclude Include="cPigNose.h">
       <Filter>SampleClass</Filter>
     </ClInclude>
+    <ClInclude Include="cScene_PlayerTest.h">
+      <Filter>Scene\Sample</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -490,6 +493,9 @@
     </ClCompile>
     <ClCompile Include="cPigNose.cpp">
       <Filter>SampleClass</Filter>
+    </ClCompile>
+    <ClCompile Include="cScene_PlayerTest.cpp">
+      <Filter>Scene\Sample</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

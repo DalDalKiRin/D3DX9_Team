@@ -349,3 +349,10 @@ void cSkinnedAnimation::SetAnimation(LPD3DXANIMATIONSET animSet)
 		this->m_pNowPlayAnimationSet = animSet;
 	}
 }
+
+D3DXMATRIXA16 * cSkinnedAnimation::GetBoneTransform(std::string str)
+{
+	BONE* pFindBone = m_pSkinnedMesh->GetFineBONE(str);
+	//	return m_mapBoneTransform.find(pFindBone)->second;
+	return &pFindBone->CombinedTransformationMatrix;
+}
