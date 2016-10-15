@@ -937,7 +937,7 @@ void cTransform::SetWorldMatrix(const D3DXMATRIXA16& matWorld)
 	}
 }
 
-// # 자신의 회전 값을 from 과 to 사이의 회전량만큼 회전보간(구면보간) 하여 적용 #ㄴ
+// # 자신의 회전 값을 from 과 to 사이의 회전량만큼 회전보간(구면보간) 하여 적용 #
 void cTransform::RotateSlerp(const cTransform& from, const cTransform& to, float t)
 {
 	t = Clamp01(t);

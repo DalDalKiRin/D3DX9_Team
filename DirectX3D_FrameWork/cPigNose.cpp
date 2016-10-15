@@ -8,6 +8,7 @@
 
 
 cPigNose::cPigNose()
+	: find(false)
 {
 }
 
@@ -38,12 +39,18 @@ void cPigNose::Release()
 void cPigNose::Update(float timeDelta)
 {
 	this->pChar->Update(timeDelta);
+	if (find)
+		findPlayer();
 }
 
 void cPigNose::Render()
 {
 	this->pChar->Render();
 	this->pChar->BoundBox.RenderGizmo(pChar->pTransform);
+}
+
+void cPigNose::beginSetting()
+{
 }
 
 void cPigNose::MESH_LOAD()
@@ -71,4 +78,8 @@ void cPigNose::MESH_LOAD()
 	pChar->SetMesh(pSkinned);
 	pChar->SetActive(true);
 	pChar->pTransform->SetWorldPosition(0.0f, 0.0f, 0.0f);
+}
+
+void cPigNose::findPlayer()
+{
 }

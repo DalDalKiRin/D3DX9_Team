@@ -159,9 +159,10 @@ void cScene::Render()
 	this->pMainCamera->RenderTextureEnd(0, 0);		//0 번스테이지에 셋팅된 0 RenderTarget 을 종료 시킨다.
 
 	// # Post Effect #
-	// this->RenderBase();
-	// this->RenderOutline();
-	 this->RenderGlow();
+	this->RenderBase();
+//	this->RenderOutline();
+//	this->RenderGlow();
+//	this->RenderSepia();
 
 	this->Scene_Render_AfterPostEffect(this->pMainCamera->GetRenderTexture(0));
 
@@ -781,6 +782,42 @@ void cScene::RenderGlow()
 	iPass;
 	this->postEffect->Begin(&iPass, 0);
 	for (UINT i = 0; i < iPass; i++) {
+		this->postEffect->BeginPass(i);
+
+		Device->SetFVF(SCENE_VERTEX::FVF);
+		Device->DrawIndexedPrimitiveUP(
+			D3DPT_TRIANGLELIST,
+			0,
+			4,
+			2,
+			this->scenePlaneIndex,
+			D3DFMT_INDEX16,
+			this->scenePlaneVertex,
+			sizeof(SCENE_VERTEX));
+
+		this->postEffect->EndPass();
+	}
+	this->postEffect->End();
+}
+
+void cScene::RenderSepia()
+{
+	this->postEffect->SetTechnique("SepiaColor");
+
+	this->postEffect->SetTexture("screenTex", this->pMainCamera->GetRenderTexture(0));
+
+	float pixelU = 1.0f / WINSIZE_X;
+	float pixelV = 1.0f / WINSIZE_Y;
+
+	this->postEffect->SetFloat("pixelSizeU", pixelU);
+	this->postEffect->SetFloat("pixelSizeV", pixelV);
+	this->postEffect->SetFloat("pixelHalfSizeU", pixelU * 0.5f);
+	this->postEffect->SetFloat("pixelHalfSizeV", pixelU * 0.5f);
+
+	UINT iPass;
+	this->postEffect->Begin(&iPass, 0);
+	for (UINT i = 0; i < iPass; i++)
+	{
 		this->postEffect->BeginPass(i);
 
 		Device->SetFVF(SCENE_VERTEX::FVF);

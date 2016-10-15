@@ -58,7 +58,7 @@ HRESULT cScene_00::Scene_Init()
 
 	//랱더 오브젝트 푸쉬
 	this->renderObjects.push_back(pNewObject1);
-	this->renderObjects.push_back(pNewObject2);
+//	this->renderObjects.push_back(pNewObject2);
 	this->renderObjects.push_back(pNewObject3);
 
 
@@ -72,7 +72,7 @@ HRESULT cScene_00::Scene_Init()
 	//TrailRenderSet
 	this->pTrailRender = new cTrailRender();
 	this->pTrailRender->Init(
-		1.0f,					//꼬리 라이브 타임 ( 이게 크면 환영큐 사이즈가 커지고 꼬리가 오랬동안 남아있다 )
+		0.3f,					//꼬리 라이브 타임 ( 이게 크면 환영큐 사이즈가 커지고 꼬리가 오랬동안 남아있다 )
 		1.0f,					//폭
 		RESOURCE_TEXTURE->GetResource("../Resources/Testures/TrailTest.png"),	//메인 Texture
 		D3DXCOLOR(1, 0, 0, 1),												//메인 Texture 로 그릴때 컬러
@@ -141,6 +141,7 @@ void cScene_00::Scene_Render1()
 
 	//랜더 ( 왠만하면 알파블랜딩이니깐 나중에 그리자... )
 	this->pTrailRender->Render();
+	this->pTrailRender->RenderDistort(pMainCamera);
 }
 
 void cScene_00::Scene_RenderSprite()

@@ -44,6 +44,7 @@ public:
 	void		Update(float timeDelta);
 	void		Render(cTransform* pTransform);
 	void		RenderBoneName(cCamera* pCam, cTransform* pTransform);
+	void		RenderAnimationName();
 
 
 	void Play(std::string animName, float crossFadeTime = 0.0);
@@ -79,6 +80,16 @@ public:
 	std::string GetNowPlayAnimationName(void)
 	{
 		return this->m_pNowPlayAnimationSet->GetName();
+	}
+
+	double GetPlayAniTime()
+	{
+		return this->m_AnimationPlayFactor;
+	}
+
+	int GetAnimSetSize()
+	{
+		return this->m_vecAnimSet.size();
 	}
 
 	// 이름으로 본 찾기

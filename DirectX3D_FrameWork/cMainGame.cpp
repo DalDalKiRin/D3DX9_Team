@@ -18,6 +18,8 @@
 
 // # collisionTestScene ±Ô¿ø #
 #include "CollisionTestScene.h"
+#include "cGhostAndToadTestScene.h"
+#include "cEnemyShowScene.h"
 
 // ¼¼ÈÆ
 #include "cScene_PlayerTest.h"
@@ -49,11 +51,12 @@ HRESULT cMainGame::Init(void)
 	GIZMO_MGR->Init(Device);
 	SPRITE_MGR->Init(Device);
 	SCENE_MGR->Init();
+	SOUND_MGR->Init();
 
 	// ¾À »ý¼º
 	SCENE_MGR->AddScene("¾À0", new cScene_00());
 	SCENE_MGR->AddScene("¾À1", new cScene_01());
-	SCENE_MGR->ChangeScene("¾À1");
+//	SCENE_MGR->ChangeScene("¾À1");
 
 	/* # ¿ì¸® ¾À # */
 	m_vecSceneName.clear();
@@ -89,7 +92,9 @@ HRESULT cMainGame::Init(void)
 	m_vecSceneName.push_back("Loading");
 
 	SCENE_MGR->AddScene("CollisionTestScene", new CollisionTestScene());
+	SCENE_MGR->AddScene("cGhostAndToadTestScene", new cGhostAndToadTestScene());
 	SCENE_MGR->AddScene("cScene_PlayerTest", new cScene_PlayerTest());
+	SCENE_MGR->AddScene("cEnemyShowScene", new cEnemyShowScene());
 
 	SCENE_MGR->ChangeScene("Loading");
 
@@ -123,6 +128,7 @@ void cMainGame::Release()
 	SCENE_MGR->Release();
 	cSceneManager::ReleaseInstance();
 	cPhysicManager::ReleaseInstance();
+	cSoundManager::ReleaseInstance();
 
 	RESOURCE_TEXTURE->ClearResource();
 	cResourceMgr_Texture::ReleaseInstance();
@@ -142,6 +148,8 @@ void cMainGame::Update()
 {
 	// # Å¸ÀÓ ¸Å´ÏÀú ¾÷µ¥ÀÌÆ® #
 	TIME_MGR->UpdateTime(60.0f);
+	// # »ç¿îµå ¸Å´ÏÀú ¾÷µ¥ÀÌÆ® #
+	SOUND_MGR->Update();
 
 	// # ÇÑ ÇÁ·¹ÀÓ °»½Å ½Ã°£ #
 	double timeDelta = TIME_MGR->GetFrameDeltaSec();
@@ -245,16 +253,19 @@ void cMainGame::NextControl(void)
 		SCENE_MGR->ChangeScene(m_vecSceneName[m_nCurrentSceneIndex]);
 	}
 
-	if (KEY_MGR->IsOnceDown(VK_NUMPAD0))
+	if (KEY_MGR->IsStayDown('C'))
 	{
-		SCENE_MGR->ChangeScene("CollisionTestScene");
+		if (KEY_MGR->IsOnceDown(VK_NUMPAD0))
+			SCENE_MGR->ChangeScene("cGhostAndToadTestScene");
+		else if (KEY_MGR->IsOnceDown(VK_NUMPAD1))
+			SCENE_MGR->ChangeScene("CollisionTestScene");
+		else if (KEY_MGR->IsOnceDown(VK_NUMPAD2))
+			SCENE_MGR->ChangeScene("cScene_PlayerTest");
+		else if (KEY_MGR->IsOnceDown(VK_NUMPAD3))
+			SCENE_MGR->ChangeScene("cEnemyShowScene");
+		else if (KEY_MGR->IsOnceDown(VK_NUMPAD4))
+			SCENE_MGR->ChangeScene("¾À1");
+		else if (KEY_MGR->IsOnceDown(VK_NUMPAD5))
+			SCENE_MGR->ChangeScene("¾À0");
 	}
-
-	if (KEY_MGR->IsOnceDown(VK_NUMPAD1))
-	{
-		SCENE_MGR->ChangeScene("cScene_PlayerTest");
-	}
-
-	
 }
-

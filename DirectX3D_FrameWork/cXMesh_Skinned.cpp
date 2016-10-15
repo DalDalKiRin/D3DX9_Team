@@ -182,7 +182,7 @@ void cXMesh_Skinned::Render(const cTransform* pTrans)
 	}
 
 
-	m_pSkinnedEffect->SetTechnique("SkinnedMesh");
+	m_pSkinnedEffect->SetTechnique("Base");
 
 	//SkinnedEffect WorldMatrix Àû¿ë
 	m_pSkinnedEffect->SetMatrix("matWorld", &matFinal);
@@ -310,7 +310,7 @@ void cXMesh_Skinned::ShowAnimationName(int x, int y)
 	for (i = 0; i < m_AnimNum; i++)
 	{
 		DXFONT_MGR->PrintText(
-			this->m_vecAnimSet[i]->GetName(), x, y + i * 20, 0xffffffff);
+			this->m_vecAnimSet[i]->GetName(), x, y + i * 20, 0xffff0000);
 	}
 
 }

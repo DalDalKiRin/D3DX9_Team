@@ -73,5 +73,7 @@ private:
 	void RenderColorLevel();
 
 	void RenderGlow();
+
+	void RenderSepia();		// # ¼¼ÇÇ¾Æ #
 };
 

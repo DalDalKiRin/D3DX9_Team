@@ -97,7 +97,6 @@ HRESULT cScene_01::Scene_Init()
 //	SCENE_MGR->fProgress = 90.0f;
 //	SCENE_MGR->fString = "오브젝트 로딩 중";
 
-
 	//원래 있던 매쉬에서 다음과 같은 행렬로 보정시켜 
 	//모든 정보를 틀어버린다.
 	D3DXMATRIXA16 matScale;
@@ -114,16 +113,16 @@ HRESULT cScene_01::Scene_Init()
 			"../Resources/Meshes/Disc.x");
 
 	//오브젝트 생성
-	for (int i = 0; i < OBJECT_NUM; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		for (int j = 0; j < OBJECT_NUM; j++)
+		for (int j = 0; j < 4; j++)
 		{
 			cBaseObject* pNewObject = new cBaseObject();
 			pNewObject->SetMesh(mesh);
 			pNewObject->SetActive(true);
 
 			//if( j % 2 == 0 )
-			//	pNewObject->IgnoreCreateShadow = true;	//그림자 안그림
+				pNewObject->IgnoreCreateShadow = true;	//그림자 안그림
 
 			D3DXVECTOR3 pos(i * 10, 30.0f, j * 20);
 
@@ -139,12 +138,12 @@ HRESULT cScene_01::Scene_Init()
 	}
 
 	//디스크 추가
-	//cBaseObject* pNewObject2 = new cBaseObject();
-	//pNewObject2->SetMesh( Disc );
-	//pNewObject2->SetActive( true );
-	//pNewObject2->pTransform->SetWorldPosition( 0, -10.0f, 0.0f );
-	//pNewObject2->IgnoreCreateShadow = true;		//그림자 안그린다.
-	//this->renderObjects.push_back( pNewObject2 );
+	cBaseObject* pNewObject2 = new cBaseObject();
+	pNewObject2->SetMesh( Disc );
+	pNewObject2->SetActive( true );
+	pNewObject2->pTransform->SetWorldPosition( 0, -10.0f, 0.0f );
+//	pNewObject2->IgnoreCreateShadow = true;		//그림자 안그린다.
+	this->renderObjects.push_back( pNewObject2 );
 
 	//기본라이트 방향
 	this->pSceneBaseDirectionLight->pTransform->RotateWorld(

@@ -34,7 +34,6 @@ sampler2D screenSampler = sampler_state{
 	MAGFILTER = LINEAR;
 	MIPFILTER = LINEAR;
 	MINFILTER = LINEAR;
-	
 };
 
 float4 ps_Base( VS_OUTPUT Input ) : COLOR0
@@ -44,8 +43,7 @@ float4 ps_Base( VS_OUTPUT Input ) : COLOR0
 
 	return tex2D( screenSampler, Input.uv );
 
-	//return float4(tex2D(screenSampler, Input.uv).www, 1);
-
+	//return float4(tex2D(screenSampler, Input.uv).rrr, 1);
 }
 
 
@@ -305,6 +303,22 @@ float4 ps_ColorLevel(VS_OUTPUT Input) : COLOR0
 	return finalColor;
 }
 
+float4 ps_SepiaColor(VS_OUTPUT Input) : COLOR0
+{
+	Input.uv.x += pixelHalfSizeU;
+	Input.uv.y += pixelHalfSizeV;
+
+	float4 texColor = tex2D(screenSampler, Input.uv);
+
+	float4 finalColor;
+	finalColor.r = dot(texColor.rgb, float3(0.393f, 0.769f, 0.189f));
+	finalColor.g = dot(texColor.rgb, float3(0.349f, 0.686f, 0.168f));
+	finalColor.b = dot(texColor.rgb, float3(0.272f, 0.534f, 0.131f));
+	finalColor.a = 1.0f;
+
+	return finalColor;
+}
+
 
 
 
@@ -391,5 +405,15 @@ technique ColorLevel
 		ZWRITEENABLE = FALSE;
 		VertexShader = compile vs_3_0 vs_Base();
 		PixelShader = compile ps_3_0 ps_ColorLevel();
+	}
+}
+
+technique SepiaColor
+{
+	pass p0
+	{
+		ZWRITEENABLE = FALSE;
+		VertexShader = compile vs_3_0 vs_Base();
+		PixelShader = compile ps_3_0 ps_SepiaColor();
 	}
 }

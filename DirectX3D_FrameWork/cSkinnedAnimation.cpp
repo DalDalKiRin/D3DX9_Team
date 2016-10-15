@@ -166,6 +166,11 @@ void		cSkinnedAnimation::RenderBoneName(cCamera* pCam, cTransform* pTransform)
 	m_pSkinnedMesh->RenderBoneName(pCam, pTransform);
 }
 
+void cSkinnedAnimation::RenderAnimationName()
+{
+	m_pSkinnedMesh->ShowAnimationName(0, 100);
+}
+
 
 
 //Animation 이름으로 플레이

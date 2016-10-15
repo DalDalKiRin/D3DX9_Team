@@ -75,7 +75,7 @@ PS_OUTPUT ps_main(PS_INPUT Input)
 		clip(diffTex.a - 0.1f);
 
 	//TBN Matrix
-	float3x3 TBN = float3x3(
+	float3x3 TBN = float3x3(		// # 월드 -> 접선 행렬 #
 		normalize(Input.Tangent),
 		normalize(Input.Binormal),
 		normalize(Input.Normal));
@@ -83,13 +83,15 @@ PS_OUTPUT ps_main(PS_INPUT Input)
 	//   
 	// WorldNormal
 	//
+
+	// # 법선 맵 텍스쳐로부터 법선을 읽어옴 #
 	float3 norColor = tex2D(Normal, Input.Texcoord).rgb;
 
 		//Tangent Space Normal
-		float3 spaceNor = (norColor * 2.0f) - 1.0f;
+		float3 spaceNor = (norColor * 2.0f) - 1.0f;	// # RGB를 XYZ기준으로 변환 #
 
-		float3 worldNormal = mul(spaceNor, TBN);
-		float3 viewDir = normalize(Input.viewDir);
+		float3 worldNormal = mul(spaceNor, TBN);	// # 월드의 법선 #
+		float3 viewDir = normalize(Input.viewDir);	// # 뷰 방향 #
 
 		//최종 색
 		float3 finalDiffuse = float3(0, 0, 0);

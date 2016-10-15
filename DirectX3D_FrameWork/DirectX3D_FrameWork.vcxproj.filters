@@ -121,6 +121,51 @@
     <Filter Include="SampleClass">
       <UniqueIdentifier>{6251f1ff-637f-4703-b9d1-49e0ff13b37a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Manager\Sound">
+      <UniqueIdentifier>{60f9c3f6-6ad1-4424-9eda-d5703135d1b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys">
+      <UniqueIdentifier>{574f77c9-d1db-4e8f-94ef-3aa7a5339ba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Alice2">
+      <UniqueIdentifier>{beaab85f-2b3d-40ea-ae42-4923af1ef0a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Ghost">
+      <UniqueIdentifier>{a93e38fa-22e4-4697-836c-6015bf904384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Pixie">
+      <UniqueIdentifier>{4cfe9790-e4a9-4851-b09e-a5ece08c447b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Snake">
+      <UniqueIdentifier>{4fa7577c-45bc-4539-96ee-28c72481171b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Toad">
+      <UniqueIdentifier>{730995d6-8122-4bd9-9406-0cec19766c35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Alice">
+      <UniqueIdentifier>{70395ab0-e7ad-451d-9943-f9ac40681e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Pumpkin">
+      <UniqueIdentifier>{fd83db05-2245-4592-b863-437d55f1c526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\RunMonster">
+      <UniqueIdentifier>{057da090-f670-435a-ac4c-205ae56ce66d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemy">
+      <UniqueIdentifier>{34815594-b1d0-4987-9d52-2118b26a94d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\VampirGentleman">
+      <UniqueIdentifier>{41136931-abf9-406a-93c3-699fad19ca4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\VampirLady">
+      <UniqueIdentifier>{d350c39a-ef7a-41c0-bd75-c4bd16ed0572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Zombie">
+      <UniqueIdentifier>{63826d3a-4f1c-489e-8691-6b3775858a43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SampleClass\Enemys\Zombie2">
+      <UniqueIdentifier>{6745f613-716a-430c-980c-811312795132}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -303,14 +348,56 @@
     <ClInclude Include="CollisionTestScene.h">
       <Filter>Scene\Sample</Filter>
     </ClInclude>
-    <ClInclude Include="cEnemy.h">
-      <Filter>SampleClass</Filter>
-    </ClInclude>
-    <ClInclude Include="cPigNose.h">
-      <Filter>SampleClass</Filter>
-    </ClInclude>
     <ClInclude Include="cScene_PlayerTest.h">
       <Filter>Scene\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="cPixie.h">
+      <Filter>SampleClass\Enemys\Pixie</Filter>
+    </ClInclude>
+    <ClInclude Include="cEnemy.h">
+      <Filter>SampleClass\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="cGhost.h">
+      <Filter>SampleClass\Enemys\Ghost</Filter>
+    </ClInclude>
+    <ClInclude Include="cGhostAndToadTestScene.h">
+      <Filter>Scene\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="cToad.h">
+      <Filter>SampleClass\Enemys\Toad</Filter>
+    </ClInclude>
+    <ClInclude Include="cSnake.h">
+      <Filter>SampleClass\Enemys\Snake</Filter>
+    </ClInclude>
+    <ClInclude Include="cAlice2.h">
+      <Filter>SampleClass\Enemys\Alice2</Filter>
+    </ClInclude>
+    <ClInclude Include="cSoundManager.h">
+      <Filter>Manager\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="cAlice.h">
+      <Filter>SampleClass\Enemys\Alice</Filter>
+    </ClInclude>
+    <ClInclude Include="cEnemyShowScene.h">
+      <Filter>Scene\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="cPumpkin.h">
+      <Filter>SampleClass\Enemys\Pumpkin</Filter>
+    </ClInclude>
+    <ClInclude Include="cRunMonster.h">
+      <Filter>SampleClass\Enemys\RunMonster</Filter>
+    </ClInclude>
+    <ClInclude Include="cVampirGentleman.h">
+      <Filter>SampleClass\Enemys\VampirGentleman</Filter>
+    </ClInclude>
+    <ClInclude Include="cVampirLady.h">
+      <Filter>SampleClass\Enemys\VampirLady</Filter>
+    </ClInclude>
+    <ClInclude Include="cZombie2.h">
+      <Filter>SampleClass\Enemys\Zombie2</Filter>
+    </ClInclude>
+    <ClInclude Include="cZombie.h">
+      <Filter>SampleClass\Enemys\Zombie</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -488,14 +575,56 @@
     <ClCompile Include="CollisionTestScene.cpp">
       <Filter>Scene\Sample</Filter>
     </ClCompile>
-    <ClCompile Include="cEnemy.cpp">
-      <Filter>SampleClass</Filter>
-    </ClCompile>
-    <ClCompile Include="cPigNose.cpp">
-      <Filter>SampleClass</Filter>
-    </ClCompile>
     <ClCompile Include="cScene_PlayerTest.cpp">
       <Filter>Scene\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="cPixie.cpp">
+      <Filter>SampleClass\Enemys\Pixie</Filter>
+    </ClCompile>
+    <ClCompile Include="cEnemy.cpp">
+      <Filter>SampleClass\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="cGhost.cpp">
+      <Filter>SampleClass\Enemys\Ghost</Filter>
+    </ClCompile>
+    <ClCompile Include="cGhostAndToadTestScene.cpp">
+      <Filter>Scene\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="cToad.cpp">
+      <Filter>SampleClass\Enemys\Toad</Filter>
+    </ClCompile>
+    <ClCompile Include="cSnake.cpp">
+      <Filter>SampleClass\Enemys\Snake</Filter>
+    </ClCompile>
+    <ClCompile Include="cAlice2.cpp">
+      <Filter>SampleClass\Enemys\Alice2</Filter>
+    </ClCompile>
+    <ClCompile Include="cSoundManager.cpp">
+      <Filter>Manager\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="cAlice.cpp">
+      <Filter>SampleClass\Enemys\Alice</Filter>
+    </ClCompile>
+    <ClCompile Include="cEnemyShowScene.cpp">
+      <Filter>Scene\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="cPumpkin.cpp">
+      <Filter>SampleClass\Enemys\Pumpkin</Filter>
+    </ClCompile>
+    <ClCompile Include="cRunMonster.cpp">
+      <Filter>SampleClass\Enemys\RunMonster</Filter>
+    </ClCompile>
+    <ClCompile Include="cVampirGentleman.cpp">
+      <Filter>SampleClass\Enemys\VampirGentleman</Filter>
+    </ClCompile>
+    <ClCompile Include="cVampirLady.cpp">
+      <Filter>SampleClass\Enemys\VampirLady</Filter>
+    </ClCompile>
+    <ClCompile Include="cZombie2.cpp">
+      <Filter>SampleClass\Enemys\Zombie2</Filter>
+    </ClCompile>
+    <ClCompile Include="cZombie.cpp">
+      <Filter>SampleClass\Enemys\Zombie</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

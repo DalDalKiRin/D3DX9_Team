@@ -1,14 +1,12 @@
 #pragma once
 #include "cScene.h"
 
-class cPigNose;
-
+class cPixie;
 
 class CollisionTestScene : public cScene
 {
 private:
-	cPigNose* pPigNose;
-	cPigNose* pPigNose2;
+	cPixie* pPixie;
 
 public:
 	CollisionTestScene();
@@ -26,5 +24,14 @@ public:
 
 	virtual void Scene_Render_AfterPostEffect(LPDIRECT3DTEXTURE9 pScreen);
 
+
+	void CollisionSphere();
+	void CollisionBox();
+	void CollisionUnMoveBlocking();
+	void CollisionMoveBlocking();
+	void CollisionRaySphere();
+	void CollisionRayBox();
+
+	void MoveTest(float timeDelta);
 };
 

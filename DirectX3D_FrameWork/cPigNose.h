@@ -3,7 +3,7 @@
 
 class cPigNose : public cEnemy
 {
-
+	bool find;
 
 public:
 	cPigNose();
@@ -14,6 +14,9 @@ public:
 	virtual void Update(float timeDelta);
 	virtual void Render();
 
+	virtual void beginSetting();
+
 	virtual void MESH_LOAD();
+	void findPlayer();
 };
 

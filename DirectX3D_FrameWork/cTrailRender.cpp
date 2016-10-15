@@ -28,7 +28,7 @@ void cTrailRender::Init(float trailLiveTime, float width, LPDIRECT3DTEXTURE9 pTr
 	//삼각형 수는 Trail 수의 2 배 ( TrailIndex 이거 하나가 Triangle 하나 이다 )
 	this->m_pTrailIndices = new TrailIndex[this->m_nTrailMaxNum * 2];
 
-	//자식 Transfom Widht 폭에 맞추어 셋팅
+	//자식 Transform Widht 폭에 맞추어 셋팅
 	this->m_LeftTransform.SetWorldPosition(width * -0.5f, 0.0f, 0.0f);
 	this->m_RightTransform.SetWorldPosition(width * 0.5f, 0.0, 0.0f);
 
